@@ -6,6 +6,7 @@
 # TO DO - use the latest builder image from Seldon, not always 1.4.0
 
 s2i build . seldonio/seldon-core-s2i-python3:1.4.0-dev note-cluster
+docker run -p 5001:5000 IMAGE_ID
 docker commit 8b4
 docker tag note-cluster harbor.k8s-tools.digital.coveahosted.co.uk/galileo_engineers_test/note-cluster
 docker push harbor.k8s-tools.digital.coveahosted.co.uk/galileo_engineers_test
