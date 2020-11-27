@@ -1,6 +1,6 @@
 from seldon_core.seldon_client import SeldonClient
 
-notes = ['damage to a vehicle', 'hello']
+notes = ['damage', 'fire']
 
 endpoint = "0.0.0.0:5001"
 
@@ -9,4 +9,4 @@ response = sc.microservice(
  json_data=notes,
  method="predict")
 
-print(response.request)
+print(response.success)
