@@ -22,4 +22,4 @@ class NoteCluster(object):
         svd_vec = self.svd.transform(vecd_notes)
         cluster_preds = self.km_500.predict(svd_vec)
 
-        return cluster_preds
+        return svd_vec
